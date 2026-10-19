@@ -3,11 +3,189 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My First Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My IT Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f2ff;
+            color: #29213b;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #5b21b6;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        header h2 {
+            font-size: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 85px 20px;
+            background: linear-gradient(135deg, #6d28d9, #a855f7);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background: white;
+            color: #5b21b6;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 55px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #6d28d9;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .skill {
+            background: white;
+            border: 1px solid #ddd0ff;
+            padding: 18px 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #5b21b610;
+        }
+
+        .project {
+            max-width: 500px;
+            margin: 20px auto 0;
+            padding: 25px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px #5b21b615;
+        }
+
+        footer {
+            background: #2e1065;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Hello! Welcome to My Website</h1>
-    <p>I am a fourth-year IT student.</p>
-    <p>I am learning HTML and GitHub.</p>
+
+    <header>
+        <h2>My Portfolio 💜</h2>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Hello, Welcome to My Website!</h1>
+        <p>I am a Fourth-Year IT Student.</p>
+        <p>Learning. Creating. Growing in Technology.</p>
+        <a href="#about" class="button">Discover More</a>
+    </div>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Hello! I am an Information Technology student
+            passionate about learning programming,
+            web development, and new technologies.
+        </p>
+        <p>My goal is to build useful projects and grow my IT career.</p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <p>These are the technologies I am learning.</p>
+
+        <div class="skills">
+            <div class="skill">🌐 HTML</div>
+            <div class="skill">🎨 CSS</div>
+            <div class="skill">☕ Java</div>
+            <div class="skill">🗄️ MySQL</div>
+            <div class="skill">💻 GitHub</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="project">
+            <h3>My First Website 💜</h3>
+            <p>
+                My first personal portfolio built with
+                HTML and CSS and published using GitHub Pages.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Made with 💜 by an IT Student</p>
+        <p>Keep learning. Keep building.</p>
+    </footer>
+
 </body>
 </html>
