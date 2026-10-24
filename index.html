@@ -1,208 +1,302 @@
 
-
-<h1>Mahlet Amsalu</h1>
-<p>Fourth-Year IT Student</p>
-<p>Learning. Creating. Growing in Technology.</p>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <div class="hero">
-    <img src="mahlet.png"
-     alt="Mahlet Amsalu"
-     class="profile-photo">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My IT Portfolio</title>
 
-    <title>My IT Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-    <style>
-        .profile-photo {
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid white;
-    box-shadow: 0 0 20px #e9d5ff;
-    margin-bottom: 20px;
-}
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      background: #faf7ff;
+      color: #241044;
+      line-height: 1.6;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f7f2ff;
-            color: #29213b;
-            line-height: 1.6;
-        }
+    header {
+      background: #32105f;
+      color: white;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-        header {
-            background: #5b21b6;
-            color: white;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
+    header h2 {
+      color: #d8b4fe;
+    }
 
-        header h2 {
-            font-size: 24px;
-        }
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 18px;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
 
-        .hero {
-            text-align: center;
-            padding: 85px 20px;
-            background: linear-gradient(135deg, #6d28d9, #a855f7);
-            color: white;
-        }
+    nav a:hover {
+      color: #d8b4fe;
+    }
 
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
+    .hero {
+      padding: 85px 8%;
+      text-align: center;
+      color: white;
+      background: linear-gradient(135deg, #4c1d95, #a855f7);
+    }
 
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      margin-bottom: 15px;
+    }
 
-        .button {
-            display: inline-block;
-            background: white;
-            color: #5b21b6;
-            padding: 12px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .hero p {
+      margin: 0 auto 25px;
+      max-width: 600px;
+    }
 
-        section {
-            padding: 55px 8%;
-            text-align: center;
-        }
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #5b21b6;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        section h2 {
-            color: #6d28d9;
-            font-size: 30px;
-            margin-bottom: 20px;
-        }
+    section {
+      padding: 60px 8%;
+      scroll-margin-top: 20px;
+    }
 
-        .skills {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 25px;
-        }
+    .section-title {
+      text-align: center;
+      font-size: 30px;
+      color: #6d28d9;
+      margin-bottom: 28px;
+    }
 
-        .skill {
-            background: white;
-            border: 1px solid #ddd0ff;
-            padding: 18px 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px #5b21b610;
-        }
+    .about {
+      max-width: 750px;
+      margin: auto;
+      text-align: center;
+    }
 
-        .project {
-            max-width: 500px;
-            margin: 20px auto 0;
-            padding: 25px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 18px #5b21b615;
-        }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
 
-        footer {
-            background: #2e1065;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 14px;
+      border: 1px solid #e9d5ff;
+      box-shadow: 0 5px 18px #3b076410;
+    }
 
-        @media (max-width: 600px) {
-            header {
-                justify-content: center;
-                text-align: center;
-            }
+    .card h3 {
+      color: #6d28d9;
+      margin-bottom: 10px;
+    }
 
-            nav a {
-                margin: 0 7px;
-            }
+    .card a {
+      color: #6d28d9;
+      font-weight: bold;
+      text-decoration: none;
+    }
 
-            .hero h1 {
-                font-size: 32px;
-            }
-        }
-    </style>
+    .skills {
+      text-align: center;
+      background: #f0e7ff;
+    }
+
+    .skill {
+      display: inline-block;
+      margin: 6px;
+      padding: 8px 16px;
+      background: white;
+      color: #6d28d9;
+      border-radius: 20px;
+      border: 1px solid #d8b4fe;
+    }
+
+    .contact {
+      text-align: center;
+      background: #f0e7ff;
+    }
+
+    footer {
+      padding: 22px;
+      text-align: center;
+      background: #32105f;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      section {
+        padding: 45px 6%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <header>
-        <h2>My Portfolio 💜</h2>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-        </nav>
-    </header>
+  <header>
+    <h2>My IT Portfolio</h2>
 
-    <div class="hero">
-        <h1>Hello, Welcome to My Website!</h1>
-        <p>I am a Fourth-Year IT Student.</p>
-        <p>Learning. Creating. Growing in Technology.</p>
-        <a href="#about" class="button">Discover More</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#tips">IT Tips</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Hello, Welcome to My IT Portfolio!</h1>
+    <p>
+      I am an IT student learning technology,
+      web development, and practical computer skills.
+      Explore my learning journey and projects.
+    </p>
+    <a href="#projects" class="btn">Explore My Projects</a>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about">
+      <p>
+        I am a fourth-year Information Technology student.
+        I enjoy learning new technologies, solving problems,
+        and building useful digital projects.
+        My goal is to improve my skills through practice
+        and create solutions that help people.
+      </p>
     </div>
+  </section>
 
-    <section id="about">
-        <h2>About Me</h2>
+  <section class="skills" id="skills">
+    <h2 class="section-title">My Learning Skills</h2>
+    <p>Technologies I am learning and practicing:</p>
+    <div style="margin-top: 18px;">
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">GitHub</span>
+      <span class="skill">Web Design</span>
+      <span class="skill">Programming</span>
+      <span class="skill">Database Basics</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>💜 My First Website</h3>
         <p>
-            Hello! I am an Information Technology student
-            passionate about learning programming,
-            web development, and new technologies.
+          My first GitHub project where I practice
+          HTML, CSS, website design, and publishing.
         </p>
-        <p>My goal is to build useful projects and grow my IT career.</p>
-    </section>
+        <a href="https://github.com/mahiye2/my-first-it-project"
+           target="_blank" rel="noopener noreferrer">
+          View GitHub Repository →
+        </a>
+      </div>
 
-    <section id="skills">
-        <h2>My Skills</h2>
-        <p>These are the technologies I am learning.</p>
+      <div class="card">
+        <h3>🌐 Web Development</h3>
+        <p>
+          My learning journey in creating attractive,
+          responsive websites with HTML and CSS.
+        </p>
+      </div>
 
-        <div class="skills">
-            <div class="skill">🌐 HTML</div>
-            <div class="skill">🎨 CSS</div>
-            <div class="skill">☕ Java</div>
-            <div class="skill">🗄️ MySQL</div>
-            <div class="skill">💻 GitHub</div>
-        </div>
-    </section>
+      <div class="card">
+        <h3>💻 IT Solutions</h3>
+        <p>
+          Future projects focused on computer support,
+          technology education, and practical IT solutions.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <section id="projects">
-        <h2>My Projects</h2>
+  <section id="tips">
+    <h2 class="section-title">IT Tips & Tutorials</h2>
 
-        <div class="project">
-            <h3>My First Website 💜</h3>
-            <p>
-                My first personal portfolio built with
-                HTML and CSS and published using GitHub Pages.
-            </p>
-        </div>
-    </section>
+    <div class="cards">
+      <div class="card">
+        <h3>🔐 Online Safety</h3>
+        <p>
+          Use strong, unique passwords and enable
+          two-factor authentication when available.
+        </p>
+      </div>
 
-    <footer>
-        <p>Made with 💜 by an IT Student</p>
-        <p>Keep learning. Keep building.</p>
-    </footer>
+      <div class="card">
+        <h3>🌐 Learn HTML</h3>
+        <p>
+          Start with headings, paragraphs, links,
+          images, and simple HTML pages.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>📁 Learn GitHub</h3>
+        <p>
+          Practice repositories, commits, README files,
+          and publishing websites with GitHub Pages.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <p>
+      Interested in my projects or want to connect?
+      You can contact me by email.
+    </p>
+
+    <!-- Replace this example email with your own email -->
+    <p style="margin-top: 20px;">
+      <a class="btn" href="mailto:your-email@example.com">
+        Send Me an Email
+      </a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 My IT Portfolio | Learn • Build • Grow</p>
+  </footer>
 
 </body>
 </html>
