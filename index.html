@@ -8,6 +8,32 @@
   <title>IT Solution Hub | My Portfolio</title>
 
   <style>
+    .search-box {
+  max-width: 600px;
+  margin: 0 auto 28px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 15px 18px;
+  border: 2px solid #d8b4fe;
+  border-radius: 12px;
+  background: white;
+  color: #29213b;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-box input:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px #7c3aed22;
+}
+
+#searchMessage {
+  color: #6b647a;
+  margin-top: 8px;
+  font-size: 14px;
+}
     :root {
       --purple: #7c3aed;
       --dark: #190d2e;
@@ -422,12 +448,21 @@
     </section>
 
     <section id="services">
+</div>
       <div class="container">
         <div class="section-title">
           <h2>IT Services</h2>
           <p>Technology areas I am learning and exploring.</p>
         </div>
-
+<div class="search-box">
+  <input
+    type="search"
+    id="siteSearch"
+    placeholder="Search projects and IT tips..."
+    aria-label="Search projects and IT tips"
+  />
+  <p id="searchMessage" aria-live="polite"></p>
+</div>
         <div class="grid">
           <article class="card">
             <div class="card-icon">💻</div>
@@ -619,6 +654,38 @@
         behavior: "smooth"
       });
     });
+    const searchInput = document.getElementById("siteSearch");
+const searchMessage = document.getElementById("searchMessage");
+
+searchInput.addEventListener("input", function () {
+  const query = searchInput.value.toLowerCase().trim();
+
+  const cards = document.querySelectorAll(
+    "#projects .card, #tips .card"
+  );
+
+  let visibleCount = 0;
+
+  cards.forEach(function (card) {
+    const text = card.textContent.toLowerCase();
+    const matches = text.includes(query);
+
+    card.style.display = matches ? "" : "none";
+
+    if (matches) {
+      visibleCount++;
+    }
+  });
+
+  if (query === "") {
+    searchMessage.textContent = "";
+  } else if (visibleCount === 0) {
+    searchMessage.textContent = "No results found. Try another word.";
+  } else {
+    searchMessage.textContent =
+      visibleCount + " result(s) found.";
+  }
+});
   </script>
 </body>
 </html>
