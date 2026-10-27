@@ -363,6 +363,32 @@
         margin: 10px 0 0;
       }
     }
+    .search-box {
+  max-width: 600px;
+  margin: 0 auto 28px;
+}
+
+.search-box input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 18px;
+  border: 2px solid #d8b4fe;
+  border-radius: 12px;
+  background: white;
+  color: #29213b;
+  font-size: 16px;
+}
+
+.search-box input:focus {
+  border-color: #7c3aed;
+  outline: 2px solid #7c3aed33;
+}
+
+#searchMessage {
+  color: #6b647a;
+  margin-top: 8px;
+  font-size: 14px;
+}
   </style>
 </head>
 
@@ -510,6 +536,15 @@
     </section>
 
     <section id="projects">
+      <div class="search-box">
+  <input
+    type="search"
+    id="siteSearch"
+    placeholder="Search projects and IT tips..."
+    aria-label="Search projects and IT tips"
+  />
+  <p id="searchMessage" aria-live="polite"></p>
+</div>
       <div class="container">
         <div class="section-title">
           <h2>My Projects</h2>
@@ -636,6 +671,39 @@
           title="Back to top">↑</button>
 
   <script>
+    const searchInput = document.getElementById("siteSearch");
+const searchMessage = document.getElementById("searchMessage");
+
+searchInput.addEventListener("input", function () {
+  const query = searchInput.value.toLowerCase().trim();
+
+  const cards = document.querySelectorAll(
+    "#projects .card, #tips .card"
+  );
+
+  let visibleCount = 0;
+
+  cards.forEach(function (card) {
+    const text = card.textContent.toLowerCase();
+    const matches = text.includes(query);
+
+    card.style.display = matches ? "" : "none";
+
+    if (matches) {
+      visibleCount++;
+    }
+  });
+
+  if (query === "") {
+    searchMessage.textContent = "";
+  } else if (visibleCount === 0) {
+    searchMessage.textContent =
+      "No results found. Try another word.";
+  } else {
+    searchMessage.textContent =
+      visibleCount + " result(s) found.";
+  }
+});
     // Display the current year automatically.
     document.getElementById("year").textContent =
       new Date().getFullYear();
